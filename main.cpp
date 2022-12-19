@@ -38,7 +38,7 @@ else {
     if (funzione(a) * funzione(b) < 0) {
         b = x;
     } else {
-        a = x;-12.000
+        a = x;
     }
     err = abs((b - a) / 2);
     if (err >= 1e-6) {
