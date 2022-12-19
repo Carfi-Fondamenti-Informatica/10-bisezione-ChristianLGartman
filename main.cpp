@@ -45,5 +45,5 @@ else {
 }
 }while(e==0);
     cout << fixed << setprecision(3) << x<<endl;
-    cout << fixed << setprecision(3) << funzione(x);
+
 }
