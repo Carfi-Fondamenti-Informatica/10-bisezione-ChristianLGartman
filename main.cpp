@@ -1,5 +1,6 @@
 #include <iostream>
 #include<cmath>
+#include<iomanip>
 using namespace std;
 
 float funzione (float y) {
@@ -26,8 +27,8 @@ do{
 do{
 x=(a+b)/2;
 if (funzione(x)==0){
-    cout<<int(x*10000)/10000.0<<endl;
-    cout<<int( funzione(x) *10000)/10000.0<<endl;
+    cout << fixed << setprecision(3) << x<<endl;
+    cout << fixed << setprecision(3) << funzione(x);
 }
 else {
     if (funzione(a) * funzione(b) < 0) {
@@ -43,6 +44,6 @@ else {
     }
 }
 }while(e==0);
-    cout<<int(x*10000)/10000.0<<endl;
-    cout<<int( funzione(x) *10000)/10000.0<<endl;
+    cout << fixed << setprecision(3) << x<<endl;
+    cout << fixed << setprecision(3) << funzione(x);
 }
