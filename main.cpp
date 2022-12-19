@@ -5,7 +5,7 @@ using namespace std;
 
 float funzione (float y) {
     float f;
-    y=y/180*M_PI;
+    y=(y/180)*M_PI;
     f=y*y*cos(y)+1;
     return f;
 }
