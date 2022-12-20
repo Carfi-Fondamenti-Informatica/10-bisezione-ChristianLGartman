@@ -22,8 +22,7 @@ int main() {
 
     while(f(x,fx)!=0){
         x=(a+b)/2;
-
-        if (f(a,fx) * f(b,fx) < 0) {
+        if (f(x,fx) * f(b,fx) < 0) {
             b = x;
         }
         else {
