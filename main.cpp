@@ -11,14 +11,14 @@ double f (double y, double fx) {
 
 int main() {
     double a=0,b=0,x=0,err, fx=0;
-    while(f(a,fx)*f(b,fx)>=0) {
-        cout <<"inserire estremi"<<endl;
-        cin >> a >> b;
+   while(f(a,fx)*f(b,fx)>=0) {
+    cout <<"inserire estremi"<<endl;
+    cin >> a >> b;
 
-        if (f(a, fx)*f(b,fx) < 0){
-            break;
-        }
+    if (f(a,fx)*f(b,fx) < 0){
+        break;
     }
+}
 
     while(f(x,fx)!=0){
         x=(a+b)/2;
