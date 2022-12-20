@@ -4,7 +4,7 @@
 using namespace std;
 
 double funzione (double y) {
-    float f;
+    double f;
     y=(y/180)*M_PI;
     f=pow(y, 2)*cos(y)+1;
     return f;
@@ -12,42 +12,32 @@ double funzione (double y) {
 
 
 int main() {
-    int i, e=1;
     double x;
-    double a, b, err;
-do{
+    double a=0, b=0, err=0;
+while(funzione(a) * funzione(b)>=0){
     cout<<"inserire estremi"<<endl;
     cin>>a>>b;
-    if (funzione(a) * funzione(b)>=0){
-    i=1;
+    if(funzione(a) * funzione(b)<0){
+    break;
     }
-    else {
-        i=0;
-    }
-}while (i==0);
-do{
-x=(a+b)/2;
-if (funzione(x)==0){
-    x=x*10000;
-    x=(int)x;
-    x=x/10000;
-    cout<< x;
-    cout << fixed << setprecision(4) << funzione(x);
 }
-else {
+
+
+
+while(funzione(x)!=0){
+x=(a+b)/2;
+
     if (funzione(a) * funzione(b) < 0) {
         b = x;
     } else {
         a = x;
     }
     err = abs((b - a) / 2);
-    if (err >= 1e-6) {
-        e = 1;
-    } else {
-        e = 0;
-    }
+
+if (err < 1e-6){
+    break;
 }
-}while(e==0);
+}
     x=x*10000;
     x=(int)x;
     x=x/10000;
